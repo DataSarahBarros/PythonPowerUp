@@ -12,16 +12,14 @@ link = "https://dlp.hashtagtreinamentos.com/python/intensivao/login"
 
 pyautogui.write(link)
 pyautogui.press("enter")
- 
+time.sleep(3)
 
-time.sleep(1)
-
-pyautogui.click(x=656, y=496)
-pyautogui.write("202307631957@alunos.estacio.br")
+pyautogui.click(x=642, y=486)
+pyautogui.write("sarahbarros.bi@gmail.com")
 
 pyautogui.press("tab")
 pyautogui.write("senha")
-pyautogui.click(x=964, y=693)
+pyautogui.click(x=979, y=694)
 
 time.sleep(3)
 
@@ -50,11 +48,11 @@ for linha in tabela.index:
     custo = tabela.loc[linha, "custo"]
     pyautogui.write(str(custo))
     pyautogui.press("tab")
-    
-    obs = tabela.loc[linha, "obs"]
-    if not pandas.isna(obs):
-        pyautogui.write(str(obs))
+    custo = tabela.loc[linha, "obs"]
+    pyautogui.write(str(obs))
     pyautogui.press("tab")
 
     pyautogui.press("enter")
     pyautogui.scroll(5000)
+
+    time.sleep(1)
