@@ -1,4 +1,4 @@
-# Passo 1: Entrar no sistema da e empresa - https://dlp.hashtagtreinamentos.com/python/intensivao/login
+*Passo 1: Entrar no sistema da e empresa - https://dlp.hashtagtreinamentos.com/python/intensivao/login*
 
 pip install pyautogui (biblioteca)
 import pyautogui
@@ -23,7 +23,7 @@ pyautogui.press("win")
 pyautogui.write("opera")
 pyautogui.press("enter")
 
-# Passo 2: Fazer login
+*Passo 2: Fazer login*
 
 entrar no link: https://dlp.hashtagtreinamentos.com/python/intensivao/login
 
@@ -46,7 +46,7 @@ pyautogui.click(x=979, y=694)
 time.sleep(3)
 
 
-# Passo 3: Importar a base de dados
+*Passo 3: Importar a base de dados*
 
 PANDAS é um pacote de codigo do python que serve para trabalhar com base de dados
 pip install pandas
@@ -58,7 +58,7 @@ colocar o arquivo na mesma pasta onde o VScode esta logado
 tabela = pandas.read_csv("produtos.csv")
 print(tabela)
 
-# Passo 4: Cadastrar 1 produto
+*Passo 4: Cadastrar 1 produto*
 
 localizar um item em uma tabela, atribuir a variavel tabela = tabela.loc (colalizar)
 lista de informações no pandas se usou [colchete] = [linha, coluna]
@@ -108,4 +108,4 @@ texto = string = stc() = no python tranformar em texto
     # depois de enviar o cadastro, precisa da um scroll pra cima pra cadastrar o proximo produto
     pyautogui.scroll(5000)
 
-# Passo 5: Redefinir o processo de cadastro até acabar os produtos
+*Passo 5: Redefinir o processo de cadastro até acabar os produtos*
