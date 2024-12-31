@@ -15,7 +15,7 @@ import pyautogui
 
 import time
 
-pyautogui.PAUSE = 2
+pyautogui.PAUSE = 1
 
 # abrir o navegador
 # apertar tecla in
@@ -45,7 +45,10 @@ pyautogui.press("tab")
 pyautogui.write("senha")
 pyautogui.click(x=964, y=693)
 
-time.sleep(3)
+time.sleep(2)
+
+
+
 
 
 # Passo 3: Importar a base de dados
@@ -63,54 +66,62 @@ print(tabela)
 
 
 # Passo 4: Cadastrar 1 produto
+pyautogui.click(x=632, y=348)
 
 # localizar um item em uma tabela, atribuir a variavel tabela = tabela.loc (colalizar)
 # lista de informações no pandas se usou [colchete] = [linha, coluna]
 # variavel = tabela.loc[linha, coluna]
 
-# para cada linha da minha tabela, todos os comandos abaixo pra preencher o produto:
-# como fazer isso, escrever um lupin que permite executar varias vezes, usar: for linha in tabela.index (index é indice, o numero das linhas na tabela), depois selecione oque quer repetir e "tab" que se chama indentação, significa no python que todos os comandos com recuo estão dentro do for
-    
-for linha in tabela.index:
+linha = 0
 
 # texto = string = stc() = no python tranformar em texto
-    pyautogui.click(x=631, y=390)
-    # codigo
-    codigo = tabela.loc[linha, "codigo"]
-    pyautogui.write(str(codigo))
-    pyautogui.press("tab")
-    # marca
-    marca = tabela.loc[linha, "marca"]
-    pyautogui.write(str(marca))
-    pyautogui.press("tab")
-    # tipo
-    tipo = tabela.loc[linha, "tipo"]
-    pyautogui.write(str(tipo))
-    pyautogui.press("tab")
-    # categoria
-    categoria = tabela.loc[linha, "categoria"]
-    pyautogui.write(str(categoria))
-    pyautogui.press("tab")
-    # preco unitario
-    preco = tabela.loc[linha, "preco_unitario"]
-    pyautogui.write(str(preco))
-    pyautogui.press("tab")
-    # custo
-    custo = tabela.loc[linha, "custo"]
-    pyautogui.write(str(custo))
-    pyautogui.press("tab")
-    # obs
-    # nan = not a number = null vazio
-    obs = tabela.loc[linha, "obs"]
-    # se if o pandas não esta vazio (tab) proxima função
-    if not pandas.isna(obs)
-        pyautogui.write(str(obs))
-    pyautogui.press("tab")
+
+# codigo
+codigo = tabela.loc[linha, "codigo"]
+pyautogui.write(str(codigo))
+pyautogui.press("tab")
+# marca
+marca = tabela.loc[linha, "marca"]
+pyautogui.write(str(marca))
+pyautogui.press("tab")
+# tipo
+tipo = tabela.loc[linha, "tipo"]
+pyautogui.write(str(tipo))
+pyautogui.press("tab")
+# categoria
+categoria = tabela.loc[linha, "categoria"]
+pyautogui.write(str(categoria))
+pyautogui.press("tab")
+# preco unitario
+preco = tabela.loc[linha, "preco unitario"]
+pyautogui.write(str(preco))
+pyautogui.press("tab")
+# custo
+custo = tabela.loc[linha, "custo"]
+pyautogui.write(str(custo))
+pyautogui.press("tab")
+# obs
+obs = tabela.loc[linha, "obs"]
+pyautogui.write(str(obs))
+pyautogui.press("tab")
+# clicar no botão enviar
+pyautogui.press("enter")
 
 
-    # clicar no botão enviar
-    pyautogui.press("enter")
-    # depois de enviar o cadastro, precisa da um scroll pra cima pra cadastrar o proximo produto
-    pyautogui.scroll(5000)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Passo 5: Redefinir o processo de cadastro até acabar os produtos
+
+
